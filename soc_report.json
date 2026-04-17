@@ -1,0 +1,921 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-04-17T18:53:16.428061",
+    "tool": "SOC Log Analyzer v1.0",
+    "total_logs": 150,
+    "total_alerts": 77
+  },
+  "summary": {
+    "severity_distribution": {
+      "CRITICAL": 36,
+      "HIGH": 39,
+      "MEDIUM": 2
+    },
+    "alert_categories": {
+      "Brute Force Attack": 1,
+      "Port Scan": 2,
+      "Known Malicious IP": 35,
+      "Privilege Escalation": 37,
+      "Root Login": 2
+    },
+    "risk_score": "CRITICAL"
+  },
+  "top_source_ips": [
+    {
+      "ip": "192.168.100.99",
+      "count": 23
+    },
+    {
+      "ip": "192.168.1.19",
+      "count": 10
+    },
+    {
+      "ip": "192.168.1.17",
+      "count": 9
+    },
+    {
+      "ip": "192.168.1.13",
+      "count": 8
+    },
+    {
+      "ip": "172.16.99.1",
+      "count": 8
+    },
+    {
+      "ip": "192.168.1.5",
+      "count": 7
+    },
+    {
+      "ip": "192.168.1.9",
+      "count": 7
+    },
+    {
+      "ip": "192.168.1.6",
+      "count": 7
+    },
+    {
+      "ip": "192.168.1.7",
+      "count": 7
+    },
+    {
+      "ip": "192.168.1.1",
+      "count": 7
+    }
+  ],
+  "top_users": [
+    {
+      "user": "root",
+      "count": 41
+    },
+    {
+      "user": "alice",
+      "count": 24
+    },
+    {
+      "user": "bob",
+      "count": 23
+    },
+    {
+      "user": "charlie",
+      "count": 19
+    },
+    {
+      "user": "admin",
+      "count": 17
+    },
+    {
+      "user": "jenkins",
+      "count": 16
+    },
+    {
+      "user": "guest",
+      "count": 10
+    }
+  ],
+  "top_actions": [
+    {
+      "action": "Failed password",
+      "count": 34
+    },
+    {
+      "action": "PAM authentication failure",
+      "count": 21
+    },
+    {
+      "action": "Disconnected",
+      "count": 20
+    },
+    {
+      "action": "Invalid user",
+      "count": 18
+    },
+    {
+      "action": "session opened",
+      "count": 16
+    },
+    {
+      "action": "Connection closed",
+      "count": 15
+    },
+    {
+      "action": "session closed",
+      "count": 14
+    },
+    {
+      "action": "Accepted password",
+      "count": 12
+    }
+  ],
+  "alerts": [
+    {
+      "severity": "CRITICAL",
+      "category": "Brute Force Attack",
+      "description": "21 failed login attempts from 192.168.100.99 targeting users: alice, root",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password",
+        "Failed password",
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Port Scan",
+      "description": "Possible port scan from 192.168.100.99 \u2014 23 unique ports accessed",
+      "ip": "192.168.100.99",
+      "evidence": [
+        37121,
+        4620,
+        7835,
+        53802,
+        36910,
+        14642,
+        37823,
+        53575,
+        50511,
+        3281
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Port Scan",
+      "description": "Possible port scan from 192.168.1.19 \u2014 10 unique ports accessed",
+      "ip": "192.168.1.19",
+      "evidence": [
+        28805,
+        34949,
+        32999,
+        1801,
+        57646,
+        48688,
+        56820,
+        35638,
+        35991,
+        50326
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Invalid user",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 PAM authentication failure",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Connection closed",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 session closed",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "session closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Failed password",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 10.0.0.254 \u2014 PAM authentication failure",
+      "ip": "10.0.0.254",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 10.0.0.254 \u2014 Failed password",
+      "ip": "10.0.0.254",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Accepted password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Accepted password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Connection closed",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Connection closed",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 PAM authentication failure",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 Connection closed",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 172.16.99.1 \u2014 session opened",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 10.0.0.254 \u2014 Disconnected",
+      "ip": "10.0.0.254",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 10.0.0.254 \u2014 session closed",
+      "ip": "10.0.0.254",
+      "evidence": [
+        "session closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "Known Malicious IP",
+      "description": "Activity from known malicious IP 192.168.100.99 \u2014 Failed password",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.12",
+      "ip": "192.168.1.12",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 192.168.1.10",
+      "ip": "192.168.1.10",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 192.168.1.16",
+      "ip": "192.168.1.16",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.7",
+      "ip": "192.168.1.7",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.11",
+      "ip": "192.168.1.11",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'bob' from 192.168.1.8",
+      "ip": "192.168.1.8",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.1.13",
+      "ip": "192.168.1.13",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "session closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.3",
+      "ip": "192.168.1.3",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.17",
+      "ip": "192.168.1.17",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'bob' from 192.168.1.9",
+      "ip": "192.168.1.9",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'bob' from 192.168.1.5",
+      "ip": "192.168.1.5",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 192.168.1.1",
+      "ip": "192.168.1.1",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.15",
+      "ip": "192.168.1.15",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.5",
+      "ip": "192.168.1.5",
+      "evidence": [
+        "Connection closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 172.16.0.5",
+      "ip": "172.16.0.5",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 10.0.0.254",
+      "ip": "10.0.0.254",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.1.3",
+      "ip": "192.168.1.3",
+      "evidence": [
+        "session closed"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.17",
+      "ip": "192.168.1.17",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'bob' from 192.168.1.10",
+      "ip": "192.168.1.10",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.11",
+      "ip": "192.168.1.11",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 192.168.1.3",
+      "ip": "192.168.1.3",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 192.168.1.9",
+      "ip": "192.168.1.9",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'admin' from 172.16.0.5",
+      "ip": "172.16.0.5",
+      "evidence": [
+        "Accepted password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.19",
+      "ip": "192.168.1.19",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'charlie' from 172.16.0.5",
+      "ip": "172.16.0.5",
+      "evidence": [
+        "PAM authentication failure"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.100.99",
+      "ip": "192.168.100.99",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'root' from 192.168.1.7",
+      "ip": "192.168.1.7",
+      "evidence": [
+        "Disconnected"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'alice' from 192.168.1.19",
+      "ip": "192.168.1.19",
+      "evidence": [
+        "Invalid user"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'admin' from 172.16.99.1",
+      "ip": "172.16.99.1",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'admin' from 192.168.1.17",
+      "ip": "192.168.1.17",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'guest' from 192.168.1.10",
+      "ip": "192.168.1.10",
+      "evidence": [
+        "session opened"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Privilege Escalation",
+      "description": "Possible privilege escalation by 'jenkins' from 192.168.1.1",
+      "ip": "192.168.1.1",
+      "evidence": [
+        "Failed password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Root Login",
+      "description": "Direct root login accepted from 192.168.1.14",
+      "ip": "192.168.1.14",
+      "evidence": [
+        "Accepted password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Root Login",
+      "description": "Direct root login accepted from 192.168.1.7",
+      "ip": "192.168.1.7",
+      "evidence": [
+        "Accepted password"
+      ],
+      "timestamp": "2026-04-17T18:53:16.425152"
+    }
+  ]
+}
